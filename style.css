@@ -742,6 +742,13 @@
  }
 
 
- #nice{
-display: flex;
+/* ------------------------contact page---------------------------*/
+
+#contact{
+    padding: 8vw;
+ }
+ 
+ #contact .infor{
+    width: ;
+ 
  }
