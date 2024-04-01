@@ -691,7 +691,6 @@
      }
 
      #home .btn .black {
-        margin-left: 0px;
  }
 
  @media(max-width:850px) {
@@ -862,4 +861,4 @@
      color: #f8f7ff;
      font-weight: 500;
      font-size: 15px;
- } }
+ }}
