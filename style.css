@@ -6,14 +6,14 @@
      box-sizing: border-box;
  }
 
- 
+
 
  body {
      font-family: 'Poppins', sans-serif;
      background-color: #f8f7ff;
 
-    margin: 0;
-    padding: 0;
+     margin: 0;
+     padding: 0;
 
 
 
@@ -88,10 +88,56 @@
      transition: 0.3s ease;
  }
 
+ /* Hamburger  */
+ .active {
+     right: 15px;
+ }
+
+ .hamburger {
+     width: 20px;
+     display: none;
+     visibility: visible;
+
+ }
+
+
  @media(max-width:850px) {
      .navigation {
          overflow: hidden;
      }
+
+
+     nav .navigation ul li {
+         padding: 0;
+         margin-left: 0;
+     }
+
+     nav ul {
+         top: 65px;
+         padding: 30px;
+         right: -100%;
+         border-radius: 15px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 10px;
+         flex-direction: column;
+         transition: 1s;
+         background-color: black;
+         position: fixed;
+         z-index: 100;
+         /* visibility:hidden; */
+
+     }
+
+
+
+     .hamburger {
+         display: block;
+     }
+
+
+
  }
 
 
@@ -244,8 +290,10 @@
      }
 
      #stats .stat-base {
-     flex-direction: column;
-     gap: 20px;
+         flex-direction: column;
+         gap: 30px;
+         padding: 75px 50px;
+         margin-top: 30px;
 
      }
  }
@@ -274,8 +322,8 @@
 } */
 
  #classes .class-box {
-     display: flex;
-     flex-direction: row;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
      margin: 80px 0 20px 0;
      overflow: hidden;
  }
@@ -355,12 +403,22 @@
  }
 
  @media(max-width:850px) {
-    #classes .class-box{
-        flex-direction: column;
-        gap: 20px;
-    }
+     #classes .class-box {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 10px;
+
+     }
+
+     #classes .class-box .class-card{
+        margin: 0px;
+        
+     }
+
+     #classes .class-box .class-card h6 , #classes .class-box .class-card h6 {
+        font-size: medium;
+     }
  }
- 
+
 
  /* team members */
 
@@ -404,9 +462,21 @@
  }
 
  @media(max-width:850px) {
-    #team h2{
-        text-align: center;
-    }
+     #team h2 {
+         text-align: center;
+         font-size: 40px;
+     }
+
+     #team .team-box {
+         grid-template-columns: repeat(1, 1fr);
+         gap: 0px;
+         margin-top: 20px;
+
+     }
+
+     #team .team-box .member1 {
+         margin: 10px;
+     }
  }
 
 
@@ -499,12 +569,15 @@
 
  @media(max-width:850px) {
 
-    footer{
-        padding: 0;
-    }
+     footer {
+         padding: 0;
+     }
 
      footer .footer_container {
          grid-template-columns: repeat(1, 1fr);
+         padding-top: 50px;
+         padding: 20px 10px;
+
      }
 
      footer .footer_container .footer1 {
@@ -529,6 +602,26 @@
          display: flex;
 
          justify-content: center;
+     }
+
+     footer .footer_container .footer_logo {
+         font-size: 30px;
+
+     }
+
+     footer .footer_container .footer2 {
+         margin-top: 50px;
+         margin-bottom: 30px;
+     }
+
+     footer .footer_container .footer3 {
+         margin-bottom: 50px;
+     }
+
+     footer .copyright p {
+         margin-top: 0px;
+         font-size: smaller;
+         padding: 20px 5px;
      }
 
  }
@@ -590,13 +683,42 @@
  }
 
 
- @media(max-width:850px){
-    #home .btn {
-        display: flex;
-        flex-direction:column ;
-        gap: 10px;
-    }
+ @media(max-width:850px) {
+     #home .btn {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+     }
+
+     #home .btn .black {
  }
+
+ @media(max-width:850px) {
+
+
+
+     #profile .profile_container {
+         grid-template-columns: repeat(1, 1fr);
+
+         place-items: center;
+     }
+
+     #profile .profile_img {
+         display: flex;
+         justify-content: center;
+         margin-bottom: 30px;
+     }
+
+     #profile .profile_img img {
+         width: 90%;
+     }
+
+
+     .profile_description {
+         text-align: center;
+     }
+ }
+
 
  /* academic plan */
 
